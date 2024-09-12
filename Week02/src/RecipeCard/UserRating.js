@@ -1,6 +1,6 @@
 import { useState } from "react";
+import Button from "../components/Button";
 import { ReactComponent as HeartIcon } from "@material-design-icons/svg/filled/favorite.svg";
-import "./styles.css";
 
 export default function UserRating() {
   const [count, setCount] = useState(1);
@@ -15,18 +15,18 @@ export default function UserRating() {
 
   return (
     <div className="user_rating">
-      <button onClick={handleMinusClick} className={count > 1 ? "" : "hidden"}>
+      <Button primary hidden={count <= 1} onClick={handleMinusClick}>
         -
-      </button>
+      </Button>
       <span className="hearts">
         {count}
         {[...Array(count)].map((c, i) => (
           <HeartIcon key={i}></HeartIcon>
         ))}
       </span>
-      <button onClick={handlePlusClick} className={count < 5 ? "" : "hidden"}>
+      <Button primary hidden={count >= 5} onClick={handlePlusClick}>
         +
-      </button>
+      </Button>
     </div>
   );
 }

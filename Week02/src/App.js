@@ -1,14 +1,14 @@
 import React from "react";
-import RecipeCard from "./RecipeCard";
-import './global.css';
+import "./global.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import RecipePage from "./pages/RecipePage";
 
 function App() {
   return (
     <>
       <Header />
-      <RecipeCard />
+      <RecipePage />
       <Footer />
     </>
   );
