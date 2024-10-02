@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --beige: #f8f4e9;
+  --brown: #c0b8ad;
+  --highlight: #f8bbc3;
+  --blue: #c7d9e5;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--beige);
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+}
+
+h1 > p {
+  margin: 0;
+  margin-right: 0.5rem;
+}
+
+.app {
+ height: 100vh;
+ width: 100vw;
+ padding: 2rem;
+}
+
+.form {
+  width: auto;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.form > input {
+  height: 100%;
+  border-width: 0;
+  border-radius: 0.5rem 0 0 0.5rem;
+  padding: 0 0.5rem;
+  flex: 1;
+  font-size: 1.5rem;
+  outline-color: var(--blue);
+}
+
+.item-content {
+  width: calc(100% - 7rem);
+}
+
+.smaller {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.smaller > input {
+  height: 100%;
+  width: 100%;
+  border-width: 0;
+  border-radius: 0.5rem 0 0 0.5rem;
+  padding: 0 0.5rem;
+  font-size: 1.5rem;
+  outline-color: transparent;
+}
+
+input::placeholder {
+  color: var(--brown);
+}
+
+.form > button {
+  border-radius: 0 0.5rem 0.5rem 0;
+  background-color: var(--blue);
+}
+
+button {
+  border-width: 0;
+  border-radius: 0.5rem;
+  height: 100%;
+  padding: 0 0.5rem;
+  background-color: var(--highlight);
+  color: white;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  background-color: white;
+  align-items: center;
+  margin: 0.5rem 0;
+  justify-content: space-between;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.item-actions {
+  display: flex;
+  align-items: center;
+}
+
+.item-actions > button:not(:last-child) {
+  margin-right: 0.5rem;
+}
