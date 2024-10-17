@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --beige: #f8f4e9;
+  --brown: #c0b8ad;
+  --highlight: #f8bbc3;
+  --blue: #c7d9e5;
+
+  --bg: #f0ddcc;
+  --danger: #db7a47;
+  --success: #d0d08a;
+  --neutral: #827376;
+  --font: #5b3f34;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--bg);
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  color: var(--font);
+}
+
+h1 > p {
+  margin: 0;
+  margin-right: 0.5rem;
+}
+
+h3 {
+  padding-left: 0.5rem;
+  height: 4rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.app {
+ height: 100vh;
+ width: 100vw;
+ padding: 2rem;
+}
+
+.form {
+  width: auto;
+  margin-bottom: 3rem;
+}
+
+.row {
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.border-left-only {
+  border-radius: 0.5rem 0 0 0.5rem !important;
+}
+
+.row > input {
+  height: 100%;
+  border-width: 0;
+  border-radius: 0.5rem;
+  padding: 0 0.5rem;
+  flex: 1;
+  font-size: 1.5rem;
+  outline-color: var(--font);
+}
+
+.row > button {
+  border-radius: 0 0.5rem 0.5rem 0;
+  background-color: var(--success);
+}
+
+.item-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-content-wrapper {
+  width: calc(100% - 56px);
+  display: flex;
+  flex-direction: column;
+}
+
+.smaller {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.item-content > input {
+  height: 3rem;
+  margin: 0.5rem 0;
+  width: calc(100% - 2rem);
+  border-width: 0;
+  padding: 0 0.5rem;
+  font-size: 1.5rem;
+  outline-color: transparent;
+  color: var(--font);
+  border-radius: 0.5rem;
+  box-shadow: inset 0px 0px 0px 1px var(--font);
+}
+
+.smaller > button {
+  background-color: var(--success);
+  width: 3.25rem;
+}
+
+input::placeholder {
+  color: var(--font);
+}
+
+input {
+  color: var(--font);
+}
+
+button {
+  border-width: 0;
+  border-radius: 0.5rem;
+  height: 100%;
+  padding: 0 0.5rem;
+  background-color: var(--danger);
+  color: white;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  display: flex;
+  width: 100%;
+  height: 8rem;
+  background-color: white;
+  align-items: center;
+  margin: 0.5rem 0;
+  justify-content: space-between;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.item-actions {
+  display: flex;
+  align-items: center;
+}
+
+.item-actions > button:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.date {
+  font-weight: 400;
+}
+
+.list-sort {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--danger);
+}
+
+.list-sort > p {
+  font-weight: bold;
+}
+
+.sort-button {
+  background-color: var(--danger);
+  color: var(--beige);
+  padding: 0.2rem 1rem;
+  border-radius: 0.2rem;
+  display: flex;
+  align-items: center;
+}

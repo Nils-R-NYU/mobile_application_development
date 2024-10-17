@@ -1,0 +1,29 @@
+{
+  "todos": [
+    {
+      "title": "Buy cat food",
+      "date": "2024-10-19",
+      "id": 1
+    },
+    {
+      "title": "clean the litter box",
+      "date": "2024-10-18",
+      "id": 2
+    },
+    {
+      "title": "Take to the vet",
+      "date": "2024-10-21",
+      "id": 3
+    },
+    {
+      "title": "cat walk",
+      "date": "2024-10-20",
+      "id": 4
+    },
+    {
+      "title": "bath time!!!",
+      "date": "2024-10-22",
+      "id": 5
+    }
+  ]
+}
