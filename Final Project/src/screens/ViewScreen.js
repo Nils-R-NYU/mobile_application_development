@@ -14,7 +14,7 @@ const ViewScreen = ({ navigation }) => {
   const id = navigation.getParam("id");
   const { state, deleteDiaryPost } = useContext(Context);
 
-  const item = state.find(
+  const item = state.posts.find(
     (diaryPost) => diaryPost.id === navigation.getParam("id")
   );
 

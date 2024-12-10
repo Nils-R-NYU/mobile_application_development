@@ -1,25 +1,29 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import AppTitle from "../components/AppTitle";
 import {
   StyleSheet,
-  Text,
   View,
   FlatList,
   TouchableOpacity,
   Button,
 } from "react-native";
-import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { Context } from "../context/DiaryContext";
 import IconButton from "../components/IconButton";
 import DiaryPost from "../components/DiaryPost";
+import ErrorDisplay from "../components/ErrorDisplay";
 
 const IndexScreen = ({ navigation }) => {
-  const { state } = useContext(Context);
+  const { state, getDiaryPosts } = useContext(Context);
+
+  useEffect(() => {
+    getDiaryPosts();
+  }, []);
+
   return (
     <View style={styles.background}>
       <AppTitle />
       <FlatList
-        data={state}
+        data={state.posts}
         keyExtractor={(post) => post.id}
         renderItem={({ item }) => (
           <DiaryPost item={item} navigation={navigation} />

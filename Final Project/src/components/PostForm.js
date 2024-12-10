@@ -68,7 +68,6 @@ const PostForm = ({
           <TextInput
             autoCapitalize="words"
             autoCorrect={false}
-            multiline={true}
             style={styles.input}
             value={title}
             onChangeText={(text) => setTitle(text)}
@@ -79,6 +78,7 @@ const PostForm = ({
           <Text style={styles.label}>Content:</Text>
           <TextInput
             autoCorrect={false}
+            multiline={true}
             style={styles.input}
             value={content}
             onChangeText={(text) => setContent(text)}
@@ -161,6 +161,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     marginBottom: 5,
     textAlignVertical: "top",
+    width: "calc(100% - 20)",
   },
   image: {
     margin: "3%",

@@ -7,6 +7,7 @@ import CreateScreen from "./src/screens/CreateScreen";
 import EditScreen from "./src/screens/EditScreen";
 // renaming a generic import to something more specific
 import { Provider as DiaryProvider } from "./src/context/DiaryContext";
+import ErrorDisplay from "./src/components/ErrorDisplay";
 
 const navigator = createStackNavigator(
   {
@@ -24,12 +25,11 @@ const navigator = createStackNavigator(
   }
 );
 
-// make sure our navigator is wrapped in a React component
 const App = createAppContainer(navigator);
-// now we export our own custom component, App is children within DiaryProvider
 export default () => {
   return (
     <DiaryProvider>
+      <ErrorDisplay />
       <App />
     </DiaryProvider>
   );

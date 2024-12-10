@@ -6,7 +6,7 @@ import { Context } from "../context/DiaryContext";
 const EditScreen = ({ navigation }) => {
   const id = navigation.getParam("id");
   const { state, editDiaryPost } = useContext(Context);
-  const post = state.find(
+  const post = state.posts.find(
     (diaryPost) => diaryPost.id === navigation.getParam("id")
   );
 
