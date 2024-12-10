@@ -17,6 +17,14 @@ const IndexScreen = ({ navigation }) => {
 
   useEffect(() => {
     getDiaryPosts();
+
+    const listener = navigation.addListener("didFocus", () => {
+      getDiaryPosts();
+    });
+
+    return () => {
+      listener.remove();
+    };
   }, []);
 
   return (
