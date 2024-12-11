@@ -4,7 +4,7 @@ import createDataContext from "./createDataContext";
 const postReducer = (state, action) => {
   switch (action.type) {
     case "get_post":
-      return { ...state, posts: action.payload };
+      return { ...state, posts: sortPosts(action.payload) };
     case "delete_post":
       return {
         ...state,
@@ -18,14 +18,29 @@ const postReducer = (state, action) => {
         ),
       };
     case "set_http_error":
-      console.log("HTTP ERROR DETECTED");
       return { ...state, httpError: action.payload };
     case "unset_http_error":
-      console.log("HTTP ERROR RESOLVED");
       return { ...state, httpError: null };
     default:
       return state;
   }
+};
+
+const parseAmericanDate = (dateString) => {
+  // this function is here since im working on a german machine
+  // which usually handles dates in the format dd/mm/yyyy
+  // in order to make it work on any machine i have to parse the date in a tedious way like this...
+  const [month, day, year] = dateString.split("/").map(Number);
+  return new Date(year, month - 1, day);
+};
+
+const sortPosts = (posts) => {
+  const sorted = [...posts].sort((a, b) => {
+    const dateA = parseAmericanDate(a.date);
+    const dateB = parseAmericanDate(b.date);
+    return dateA - dateB;
+  });
+  return sorted;
 };
 
 const getDiaryPosts = (dispatch) => {

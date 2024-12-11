@@ -24,4 +24,4 @@ As a user, I want to add a date and a photo to my diary entries so that I can do
 
 - First off: unfortunately the react-native-datepicker library does not work with expo go (https://github.com/henninghall/react-native-date-picker -> Search for "expo go" on this page) so i just used a text input...
 - Add the date and image fields to the `postReducer`
-- Adding the new fields to the `CreateScreen` and the `EditScreen` because i thought it would be enough to add them to the `PostForm`
+- Adding the parameters of the new fields to the `CreateScreen` and the `EditScreen` because i thought it would be enough to add them to the `PostForm`

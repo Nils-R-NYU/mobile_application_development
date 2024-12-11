@@ -47,7 +47,6 @@ const PostForm = ({
 
     if (!result.canceled) {
       const base64Image = `data:image/jpeg;base64,${result.assets[0].base64}`;
-      console.log(base64Image.substring(0, 25));
       setImage(base64Image);
     }
   };
