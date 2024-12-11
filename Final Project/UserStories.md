@@ -8,6 +8,9 @@ As a user, I want to add a date and a photo to my diary entries so that I can do
 
 - Rework the UI to look "New Yorky"
   - Remove the Navigation-Header and Implement own Buttons for the navigation
+  - Add Error messages for failing http requests
+    - Add them as action types to the postReducer
+    - Add them to context
 - Add a Datepicker
   - Add it to `CreateScreen`
   - The Datepicker will need an `onChange` listener and a `changeHandler` function that will update the Posts date property
@@ -25,3 +28,7 @@ As a user, I want to add a date and a photo to my diary entries so that I can do
 - First off: unfortunately the react-native-datepicker library does not work with expo go (https://github.com/henninghall/react-native-date-picker -> Search for "expo go" on this page) so i just used a text input...
 - Add the date and image fields to the `postReducer`
 - Adding the parameters of the new fields to the `CreateScreen` and the `EditScreen` because i thought it would be enough to add them to the `PostForm`
+
+# Slidedeck
+
+https://www.figma.com/deck/dDiEgdTIB99rqMmk4ACpM3/AppDev-Final-Pitch?node-id=1-30&t=5Lc2Rcnbjek49izW-1
